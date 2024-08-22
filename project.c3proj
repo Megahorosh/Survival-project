@@ -1,0 +1,457 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 39700,
+	"name": "3D Top Down Shooter Template",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AdvancedRandom",
+			"name": "Advanced Random",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Camera3D",
+			"name": "3D camera",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mikal_3DObject",
+			"name": "3D object",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "2.58.0"
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Shape3D",
+			"name": "3D shape",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowhorizontal",
+			"name": "Glow horizontal",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hardlight",
+			"name": "Hard light",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "normalmapext",
+			"name": "normalmap extended",
+			"author": "Donelwero and Matriax and Mikal",
+			"bundled": false,
+			"version": "1.4.0.0"
+		},
+		{
+			"type": "effect",
+			"id": "radialblur",
+			"name": "Radial blur",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "setcolor",
+			"name": "Set color",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "dxux74922pt",
+	"objectTypes": {
+		"items": [
+			"Wall",
+			"PlayerBillboard",
+			"Spell",
+			"Ground",
+			"Crystal",
+			"Door",
+			"Monster",
+			"Particle",
+			"Beam",
+			"PlayerCollision",
+			"Crate",
+			"Text_Tutorial",
+			"DecorationBillboard",
+			"Pillar",
+			"Temple",
+			"Trigger",
+			"Grass_Texture",
+			"BiomeColor",
+			"Text_Debug",
+			"Player_shadow",
+			"3DShape2",
+			"Box_Shadow",
+			"Pillar_shadow",
+			"Example_Tesselation",
+			"Example_Tesselation2",
+			"Grass_Color",
+			"Chunk",
+			"3D_Rock",
+			"Marker_borders",
+			"Marker_Text"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"GrassTexture1",
+					"GrassTexture2",
+					"GrassTexture3",
+					"RoofTexture1",
+					"RoofTexture2",
+					"RoofTexture3",
+					"RoofTexture4",
+					"WallTexture1",
+					"WallTexture2",
+					"WallTexture3",
+					"WallTexture4",
+					"CandleHolderTexture",
+					"PlayerTexture",
+					"WallTexture5",
+					"WallTexture6",
+					"WallTexture7",
+					"WallTexture8"
+				],
+				"subfolders": [],
+				"name": "Textures"
+			},
+			{
+				"items": [
+					"3DCamera",
+					"AdvancedRandom",
+					"Array_World",
+					"Mouse",
+					"Keyboard"
+				],
+				"subfolders": [],
+				"name": "Root"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [
+		{
+			"members": [
+				"Box_Shadow",
+				"Wall"
+			]
+		},
+		{
+			"members": [
+				"Pillar",
+				"Pillar_shadow"
+			]
+		}
+	],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"ObjectRepository",
+			"MainLevel"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"MainCode"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 491895483988661,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 256850993490793,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 408342299830256,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 453710555725017,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 842942629489761,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 602590726926665,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 843548820581916,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "RockMedium.gltf",
+					"type": "application/octet-stream",
+					"sid": 417401745868680,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0.07450980392156863,
+			0.027450980392156862,
+			0.10980392156862745,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "nearest",
+		"downscaling": "low",
+		"renderingMode": "3d",
+		"anisotropicFiltering": "off",
+		"zNear": 1,
+		"zFar": 1000000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 320,
+	"viewportHeight": 200,
+	"firstLayout": "MainLevel"
+}

@@ -1,0 +1,27 @@
+{
+	"name": "3D_Rock",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 816472322667636,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 965797239317094
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8489287,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

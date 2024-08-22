@@ -1,0 +1,58 @@
+{
+	"name": "GrassTexture1",
+	"plugin-id": "Sprite",
+	"sid": 805507103827719,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3328331,
+						"collisionPoly": {
+							"points": [
+								0.234375,
+								0.1875,
+								0.640625,
+								0.1875,
+								0.984375,
+								0.390625,
+								0.9375,
+								1,
+								0.078125,
+								1,
+								0.03125,
+								0.734375,
+								0.046875,
+								0.28125,
+								0.0625,
+								0.234375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 944757658605833,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

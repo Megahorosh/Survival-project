@@ -22,8 +22,18 @@
 			"sid": 230927961875746
 		},
 		{
+			"eventType": "variable",
+			"name": "is_roll_",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 236033571585766
+		},
+		{
 			"eventType": "comment",
-			"text": "Made by Valov Games Studios\n\nMain programmer - Megahorosh\nSouls-like stuff programmer - Saltein"
+			"text": "Made by Valov Games Studios \n\nCraft-like stuff programmer - Megahorosh\nSouls-like stuff programmer - Saltein"
 		},
 		{
 			"eventType": "group",
@@ -668,165 +678,21 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
+							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 747463981991264,
+							"sid": 443955770422348,
 							"parameters": {
-								"key": 65
+								"key": 18
 							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "PlayerCollision",
-							"sid": 841953248195299,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "left"
-							}
-						}
-					],
-					"sid": 253553377169167
-				},
-				{
-					"eventType": "comment",
-					"text": "Move the player right."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 651218434567412,
-							"parameters": {
-								"key": 68
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "PlayerCollision",
-							"sid": 977814849527893,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "right"
-							}
-						}
-					],
-					"sid": 455648279174302
-				},
-				{
-					"eventType": "comment",
-					"text": "Move the player up."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 643010583373421,
-							"parameters": {
-								"key": 87
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "PlayerCollision",
-							"sid": 250249386844604,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "up"
-							}
-						}
-					],
-					"sid": 683191135834870
-				},
-				{
-					"eventType": "comment",
-					"text": "Move the player down."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 184165347305515,
-							"parameters": {
-								"key": 83
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "PlayerCollision",
-							"sid": 957167244939112,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "down"
-							}
-						}
-					],
-					"sid": 976609851716739
-				},
-				{
-					"eventType": "comment",
-					"text": "If the player moving speed is higher than 16, set its animation to \"Walking\"."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-speed",
-							"objectClass": "PlayerCollision",
-							"sid": 472724640974586,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"comparison": 5,
-								"speed": "16"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 818169977222905,
-							"parameters": {
-								"variable": "player_state",
-								"value": "\"walk\""
-							}
-						}
-					],
-					"sid": 677733264678352
-				},
-				{
-					"eventType": "comment",
-					"text": "Otherwise, set its animation back to \"Idle\"."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 723416092027550
 						},
 						{
-							"id": "compare-speed",
-							"objectClass": "PlayerCollision",
-							"sid": 810145693631672,
-							"behaviorType": "8Direction",
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 859621789519933,
 							"parameters": {
-								"comparison": 2,
-								"speed": "16"
+								"variable": "is_roll_",
+								"comparison": 0,
+								"value": "0"
 							}
 						}
 					],
@@ -834,14 +700,555 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 275848508565790,
+							"sid": 412099116021139,
 							"parameters": {
-								"variable": "player_state",
-								"value": "\"idle\""
+								"variable": "is_roll_",
+								"value": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 597850613389528,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 623237867844580,
+							"parameters": {
+								"variable": "is_roll_",
+								"value": "0"
 							}
 						}
 					],
-					"sid": 743153950258162
+					"sid": 572004462420766
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 813135739966248,
+							"parameters": {
+								"variable": "is_roll_",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 404030847224565,
+							"parameters": {
+								"variable": "player_state",
+								"value": "\"roll\""
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "PlayerCollision",
+							"sid": 634381360198023,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"speed": "96"
+							}
+						}
+					],
+					"sid": 551279211357939,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerCollision",
+									"sid": 401422849574384,
+									"parameters": {
+										"object": "Obstacle_3D"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerCollision",
+									"sid": 562440579774376,
+									"parameters": {
+										"object": "Obstacle_Box"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "reverse",
+									"objectClass": "PlayerCollision",
+									"sid": 914382600942434,
+									"behaviorType": "8Direction"
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 273174080054162,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"speed": "Self.8Direction.Speed/2"
+									}
+								}
+							],
+							"sid": 287992681201038,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 394235586794726,
+							"parameters": {
+								"variable": "is_roll_",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 509240532080856,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 106292682123991,
+									"parameters": {
+										"key": 16
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 557734956259030,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"max-speed": "120"
+									}
+								}
+							],
+							"sid": 329987084059007
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 573316163391218
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 833379686991189,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"max-speed": "96"
+									}
+								}
+							],
+							"sid": 156193878254132
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 673722131005842,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerCollision",
+									"sid": 983892425718877,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 561588744939978
+						},
+						{
+							"eventType": "comment",
+							"text": "Move the player right."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 697614859764677,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerCollision",
+									"sid": 642874630034050,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 688612712696031
+						},
+						{
+							"eventType": "comment",
+							"text": "Move the player up."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 217094196181464,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerCollision",
+									"sid": 359239658524416,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 265224213160866
+						},
+						{
+							"eventType": "comment",
+							"text": "Move the player down."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 387466654230611,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerCollision",
+									"sid": 571798098699682,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 911686785649092
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 824301755483629,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"comparison": 5,
+										"speed": "100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 949317803529756,
+									"parameters": {
+										"variable": "player_state",
+										"value": "\"run\""
+									}
+								}
+							],
+							"sid": 525950244798673
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 902022320729411,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"comparison": 5,
+										"speed": "16"
+									}
+								},
+								{
+									"id": "compare-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 895471785994407,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"comparison": 2,
+										"speed": "100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 820953492426843,
+									"parameters": {
+										"variable": "player_state",
+										"value": "\"walk\""
+									}
+								}
+							],
+							"sid": 671375905806289
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 919413728639325
+								},
+								{
+									"id": "compare-speed",
+									"objectClass": "PlayerCollision",
+									"sid": 618659629652090,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"comparison": 2,
+										"speed": "16"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 569531679183976,
+									"parameters": {
+										"variable": "player_state",
+										"value": "\"idle\""
+									}
+								}
+							],
+							"sid": 672323434157642
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerCollision",
+							"sid": 385290700601595,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [],
+					"sid": 996321951517065,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 262205607882052,
+									"parameters": {
+										"value": "PlayerCollision.8Direction.MovingAngle",
+										"lower-bound": "-60",
+										"upper-bound": "60"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 325528130085746,
+									"parameters": {
+										"variable": "player_direction",
+										"value": "\"side\""
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PlayerBillboard",
+									"sid": 291151573107998,
+									"parameters": {
+										"width": "32"
+									}
+								}
+							],
+							"sid": 968005170724128
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "System",
+									"sid": 761524803878942,
+									"parameters": {
+										"angle-1": "PlayerCollision.8Direction.MovingAngle",
+										"within": "30",
+										"angle-2": "90"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 370223600300778,
+									"parameters": {
+										"variable": "player_direction",
+										"value": "\"down\""
+									}
+								}
+							],
+							"sid": 649170660817361
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 618629226469614,
+									"parameters": {
+										"value": "PlayerCollision.8Direction.MovingAngle",
+										"lower-bound": "-180",
+										"upper-bound": "-120"
+									}
+								},
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 508134229746147,
+									"parameters": {
+										"value": "PlayerCollision.8Direction.MovingAngle",
+										"lower-bound": "120",
+										"upper-bound": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 860408986018601,
+									"parameters": {
+										"variable": "player_direction",
+										"value": "\"side\""
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PlayerBillboard",
+									"sid": 850152661111673,
+									"parameters": {
+										"width": "-32"
+									}
+								}
+							],
+							"sid": 431727741400610,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "System",
+									"sid": 280121041813153,
+									"parameters": {
+										"angle-1": "PlayerCollision.8Direction.MovingAngle",
+										"within": "30",
+										"angle-2": "-90"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 747040280800042,
+									"parameters": {
+										"variable": "player_direction",
+										"value": "\"up\""
+									}
+								}
+							],
+							"sid": 781282347698571
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 412168632951023
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlayerTexture",
+							"sid": 906171947456999,
+							"parameters": {
+								"animation": "\"sonic-\"&player_state&\"-\"&player_direction",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 506738845161406
 				},
 				{
 					"eventType": "comment",
@@ -2095,179 +2502,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-moving",
-					"objectClass": "PlayerCollision",
-					"sid": 265272296788843,
-					"behaviorType": "8Direction"
-				}
-			],
-			"actions": [],
-			"sid": 924133135140513,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-between-values",
-							"objectClass": "System",
-							"sid": 266785053841015,
-							"parameters": {
-								"value": "PlayerCollision.8Direction.MovingAngle",
-								"lower-bound": "-60",
-								"upper-bound": "60"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 249670743344465,
-							"parameters": {
-								"variable": "player_direction",
-								"value": "\"side\""
-							}
-						},
-						{
-							"id": "set-width",
-							"objectClass": "PlayerBillboard",
-							"sid": 231803014942472,
-							"parameters": {
-								"width": "32"
-							}
-						}
-					],
-					"sid": 871174819155818
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-within-angle",
-							"objectClass": "System",
-							"sid": 242551851396665,
-							"parameters": {
-								"angle-1": "PlayerCollision.8Direction.MovingAngle",
-								"within": "30",
-								"angle-2": "90"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 899137001497676,
-							"parameters": {
-								"variable": "player_direction",
-								"value": "\"down\""
-							}
-						}
-					],
-					"sid": 494010494514097
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-between-values",
-							"objectClass": "System",
-							"sid": 501502653392143,
-							"parameters": {
-								"value": "PlayerCollision.8Direction.MovingAngle",
-								"lower-bound": "-180",
-								"upper-bound": "-120"
-							}
-						},
-						{
-							"id": "is-between-values",
-							"objectClass": "System",
-							"sid": 503152103947684,
-							"parameters": {
-								"value": "PlayerCollision.8Direction.MovingAngle",
-								"lower-bound": "120",
-								"upper-bound": "180"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 507165348711820,
-							"parameters": {
-								"variable": "player_direction",
-								"value": "\"side\""
-							}
-						},
-						{
-							"id": "set-width",
-							"objectClass": "PlayerBillboard",
-							"sid": 232667723077869,
-							"parameters": {
-								"width": "-32"
-							}
-						}
-					],
-					"sid": 353478505562925,
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-within-angle",
-							"objectClass": "System",
-							"sid": 399688149510623,
-							"parameters": {
-								"angle-1": "PlayerCollision.8Direction.MovingAngle",
-								"within": "30",
-								"angle-2": "-90"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 291519494938156,
-							"parameters": {
-								"variable": "player_direction",
-								"value": "\"up\""
-							}
-						}
-					],
-					"sid": 667462244246109
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 249709861136590
 				}
 			],
 			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "PlayerTexture",
-					"sid": 357059290659773,
-					"parameters": {
-						"animation": "\"sonic-\"&player_state&\"-\"&player_direction",
-						"from": "current-frame"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Text_Debug",
-					"sid": 723601406437678,
-					"parameters": {
-						"text": "Array_World.At(int(PlayerCollision.X/16)-1,int(PlayerCollision.y/16)-1)"
-					}
-				},
 				{
 					"id": "set-width",
 					"objectClass": "Player_shadow",
@@ -2328,73 +2568,6 @@
 				}
 			],
 			"sid": 809644238183500
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerCollision",
-					"sid": 351602002663343,
-					"parameters": {
-						"object": "Pillar_shadow"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-effect-enabled",
-					"objectClass": "PlayerBillboard",
-					"sid": 791567062700509,
-					"parameters": {
-						"mode": "disable",
-						"effect": "\"RimLight\""
-					}
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "PlayerBillboard",
-					"sid": 737226247760477,
-					"parameters": {
-						"color": "rgbEx(40, 60, 80)"
-					}
-				}
-			],
-			"sid": 353636995645847
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerCollision",
-					"sid": 959104249318823,
-					"parameters": {
-						"object": "Pillar_shadow"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-effect-enabled",
-					"objectClass": "PlayerBillboard",
-					"sid": 157867972347869,
-					"parameters": {
-						"mode": "enable",
-						"effect": "\"RimLight\""
-					}
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "PlayerBillboard",
-					"sid": 436985606782476,
-					"parameters": {
-						"color": "rgbEx(100, 100, 100)"
-					}
-				}
-			],
-			"sid": 440517452302468
 		},
 		{
 			"eventType": "block",
@@ -2577,6 +2750,463 @@
 				}
 			],
 			"sid": 912129118787494
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_color_red",
+			"type": "number",
+			"initialValue": "255",
+			"comment": "0...255",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 586869801849339
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_color_green",
+			"type": "number",
+			"initialValue": "255",
+			"comment": "0...255",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 255524589731635
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_color_blue",
+			"type": "number",
+			"initialValue": "255",
+			"comment": "0...255",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 542290482943690
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "UI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerCollision",
+							"sid": 878055804929416,
+							"parameters": {
+								"object": "Pillar_shadow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "PlayerBillboard",
+							"sid": 951964237701539,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"RimLight\""
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "PlayerBillboard",
+							"sid": 709412551900696,
+							"parameters": {
+								"color": "rgbEx(40, 60, 80)"
+							}
+						}
+					],
+					"sid": 861615036827207
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerCollision",
+							"sid": 622846498501694,
+							"parameters": {
+								"object": "Pillar_shadow"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "PlayerBillboard",
+							"sid": 922065886316182,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"RimLight\""
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "PlayerBillboard",
+							"sid": 439647556869606,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						}
+					],
+					"sid": 303179012988836
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 876011671757280
+						}
+					],
+					"actions": [
+						{
+							"id": "add-child",
+							"objectClass": "SliderBar",
+							"sid": 869680038101337,
+							"parameters": {
+								"child": "SliderHead",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": true,
+								"transform-o": true,
+								"transform-z-elevation": true,
+								"transform-visibility": true,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SliderHead",
+							"sid": 229325733821591,
+							"parameters": {
+								"x": "SliderBar.x+Player_color_red/255*SliderBar.Width",
+								"y": "SliderBar.y"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "SliderHead",
+							"sid": 887482599580501,
+							"parameters": {
+								"where": "in-front",
+								"object": "SliderBar"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "PlayerBillboard",
+							"sid": 439909943263664,
+							"parameters": {
+								"effect": "\"ReplaceColorLight\"",
+								"parameter-index": "1",
+								"value": "rgb(Player_color_red,Player_color_green,Player_color_blue)"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "PlayerBillboard",
+							"sid": 663123190128625,
+							"parameters": {
+								"effect": "\"ReplaceColorMid\"",
+								"parameter-index": "1",
+								"value": "rgb(int(Player_color_red*0.7),int(Player_color_green*0.7),int(Player_color_blue*0.7))"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "PlayerBillboard",
+							"sid": 438484939674686,
+							"parameters": {
+								"effect": "\"ReplaceColorDark\"",
+								"parameter-index": "1",
+								"value": "rgb(int(Player_color_red*0.4),int(Player_color_green*0.4),int(Player_color_blue*0.4))"
+							}
+						}
+					],
+					"sid": 932378890876694,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SliderBar",
+									"sid": 222201874866469,
+									"parameters": {
+										"instance-variable": "color",
+										"comparison": 0,
+										"value": "\"red\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "SliderHead",
+									"sid": 327421425758175,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 940249679722044
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SliderBar",
+									"sid": 137688896975267,
+									"parameters": {
+										"instance-variable": "color",
+										"comparison": 0,
+										"value": "\"green\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "SliderHead",
+									"sid": 835515280004038,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 386571440430908
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SliderBar",
+									"sid": 552150433848107,
+									"parameters": {
+										"instance-variable": "color",
+										"comparison": 0,
+										"value": "\"blue\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "SliderHead",
+									"sid": 814379685033461,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 846888539362160
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "SliderHead",
+							"sid": 671356147913321,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "on-drop",
+							"objectClass": "SliderHead",
+							"sid": 522893217433258,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "PlayerBillboard",
+							"sid": 342507226703769,
+							"parameters": {
+								"effect": "\"ReplaceColorLight\"",
+								"parameter-index": "1",
+								"value": "rgb(Player_color_red,Player_color_green,Player_color_blue)"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "PlayerBillboard",
+							"sid": 201494352459635,
+							"parameters": {
+								"effect": "\"ReplaceColorMid\"",
+								"parameter-index": "1",
+								"value": "rgb(int(Player_color_red*0.7),int(Player_color_green*0.7),int(Player_color_blue*0.7))"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "PlayerBillboard",
+							"sid": 510664385597035,
+							"parameters": {
+								"effect": "\"ReplaceColorDark\"",
+								"parameter-index": "1",
+								"value": "rgb(int(Player_color_red*0.4),int(Player_color_green*0.4),int(Player_color_blue*0.4))"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Debug",
+							"sid": 967486849637055,
+							"parameters": {
+								"text": "Player_color_red&\", \"&Player_color_green&\", \"&Player_color_blue"
+							}
+						}
+					],
+					"sid": 747077154560437,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "SliderHead",
+									"sid": 887126312043234,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "SliderBar.X+SliderBar.width"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "SliderHead",
+									"sid": 465036050262917,
+									"parameters": {
+										"x": "SliderBar.X+SliderBar.width"
+									}
+								}
+							],
+							"sid": 856922527362767
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "SliderHead",
+									"sid": 646427292104113,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "SliderBar.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "SliderHead",
+									"sid": 364444289460366,
+									"parameters": {
+										"x": "SliderBar.X"
+									}
+								}
+							],
+							"sid": 788809164847174
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SliderBar",
+									"sid": 561681112013008,
+									"parameters": {
+										"instance-variable": "color",
+										"comparison": 0,
+										"value": "\"red\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 181097924680292,
+									"parameters": {
+										"variable": "Player_color_red",
+										"value": "rgb(int((SliderHead.x-SliderBar.X)/SliderBar.Width*255),0,0)"
+									}
+								}
+							],
+							"sid": 112601609962604
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SliderBar",
+									"sid": 318155649270748,
+									"parameters": {
+										"instance-variable": "color",
+										"comparison": 0,
+										"value": "\"green\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 662780763891562,
+									"parameters": {
+										"variable": "Player_color_green",
+										"value": "rgb(int((SliderHead.x-SliderBar.X)/SliderBar.Width*255),0,0)"
+									}
+								}
+							],
+							"sid": 482269444356975
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SliderBar",
+									"sid": 115147906461411,
+									"parameters": {
+										"instance-variable": "color",
+										"comparison": 0,
+										"value": "\"blue\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 787178818839524,
+									"parameters": {
+										"variable": "Player_color_blue",
+										"value": "rgb(int((SliderHead.x-SliderBar.X)/SliderBar.Width*255),0,0)"
+									}
+								}
+							],
+							"sid": 605673958881846
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 994824942128361
 		}
 	],
 	"sid": 279236097198855

@@ -5503,7 +5503,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 16,
+						"x": 24,
 						"y": -16,
 						"width": 27,
 						"height": 28,
@@ -7209,6 +7209,62 @@
 					"uid": 23,
 					"instanceVariables": {},
 					"behaviors": {},
+					"effects": {
+						"ReplaceColorLight": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.32941176470588235,
+									0.592156862745098,
+									0.796078431372549,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColorMid": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.22745098039215686,
+									0.4117647058823529,
+									0.5607843137254902,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColorDark": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.16470588235294117,
+									0.27058823529411763,
+									0.38823529411764707,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 284,
 						"uid": 23,
@@ -8584,10 +8640,151 @@
 					"world": {
 						"x": 8,
 						"y": 8,
-						"width": 200,
-						"height": 30,
+						"width": 320,
+						"height": 80,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SliderHead",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 33,
+					"instanceVariables": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "horizontal-only",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 80,
+						"y": 72,
+						"width": 7,
+						"height": 12,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SliderBar",
+					"properties": {
+						"left-margin": 3,
+						"right-margin": 3,
+						"top-margin": 3,
+						"bottom-margin": 3,
+						"edges": "tile",
+						"fill": "tile",
+						"initially-visible": true,
+						"origin": "left",
+						"seams": "overlap"
+					},
+					"uid": 36,
+					"instanceVariables": {
+						"color": "red"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 176,
+						"y": 152,
+						"width": 128,
+						"height": 8,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SliderBar",
+					"properties": {
+						"left-margin": 3,
+						"right-margin": 3,
+						"top-margin": 3,
+						"bottom-margin": 3,
+						"edges": "tile",
+						"fill": "tile",
+						"initially-visible": true,
+						"origin": "left",
+						"seams": "overlap"
+					},
+					"uid": 34,
+					"instanceVariables": {
+						"color": "green"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 176,
+						"y": 168,
+						"width": 128,
+						"height": 8,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SliderBar",
+					"properties": {
+						"left-margin": 3,
+						"right-margin": 3,
+						"top-margin": 3,
+						"bottom-margin": 3,
+						"edges": "tile",
+						"fill": "tile",
+						"initially-visible": true,
+						"origin": "left",
+						"seams": "overlap"
+					},
+					"uid": 35,
+					"instanceVariables": {
+						"color": "blue"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 176,
+						"y": 184,
+						"width": 128,
+						"height": 8,
+						"originX": 0,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

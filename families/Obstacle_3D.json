@@ -1,0 +1,11 @@
+{
+	"name": "Obstacle_3D",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 290535902016357,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"3D_Rock"
+	]
+}

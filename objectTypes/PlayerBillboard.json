@@ -5,7 +5,20 @@
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "replacecolor",
+			"name": "ReplaceColorLight"
+		},
+		{
+			"effectId": "replacecolor",
+			"name": "ReplaceColorMid"
+		},
+		{
+			"effectId": "replacecolor",
+			"name": "ReplaceColorDark"
+		}
+	],
 	"animations": {
 		"items": [
 			{

@@ -1,0 +1,15 @@
+{
+	"name": "Obstacle_Box",
+	"plugin-id": "Shape3D",
+	"sid": 824592273301566,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Pillar",
+		"Wall",
+		"Crate",
+		"Door",
+		"Crystal"
+	]
+}

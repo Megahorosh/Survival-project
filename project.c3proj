@@ -100,6 +100,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
@@ -178,6 +185,13 @@
 		},
 		{
 			"type": "effect",
+			"id": "replacecolor",
+			"name": "Replace color",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "setcolor",
 			"name": "Set color",
 			"author": "Scirra",
@@ -216,7 +230,9 @@
 			"Chunk",
 			"3D_Rock",
 			"Marker_borders",
-			"Marker_Text"
+			"Marker_Text",
+			"SliderHead",
+			"SliderBar"
 		],
 		"subfolders": [
 			{
@@ -268,10 +284,19 @@
 				"Pillar",
 				"Pillar_shadow"
 			]
+		},
+		{
+			"members": [
+				"SliderBar",
+				"SliderHead"
+			]
 		}
 	],
 	"families": {
-		"items": [],
+		"items": [
+			"Obstacle_3D",
+			"Obstacle_Box"
+		],
 		"subfolders": []
 	},
 	"layouts": {
